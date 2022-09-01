@@ -1,12 +1,10 @@
 using System;
 namespace HomePetCare.App.Dominio
+// Modela un Medico Veterinario del equipo de Veterinarios
 {
-    public class VeterinarioDomiciliario
+    public class VeterinarioDomiciliario:Persona
     {
-        public int Id { get; set; }
-        public string? Nombre { get; set; }
-        public string? Apellido { get; set; }
-        public string? Telefono { get; set; }
-        public int TarjetaProfesional { get; set; }
+        // identificacion profesional del veterinario
+        public string TarjetaProfeional {get;set;}
     }
 }

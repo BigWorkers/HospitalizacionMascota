@@ -26,8 +26,14 @@ namespace HomePetCare.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Cantidad")
+                    b.Property<int>("Cantidades")
                         .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Diagnostico")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Medicamento")
                         .HasColumnType("nvarchar(max)");
@@ -37,6 +43,21 @@ namespace HomePetCare.App.Persistencia.Migrations
                     b.ToTable("Formulas");
                 });
 
+            modelBuilder.Entity("HomePetCare.App.Dominio.Historia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("FechaInicial")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Historias");
+                });
+
             modelBuilder.Entity("HomePetCare.App.Dominio.Mascota", b =>
                 {
                     b.Property<int>("Id")
@@ -44,55 +65,59 @@ namespace HomePetCare.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("AnoNacimiento")
-                        .HasColumnType("int");
-
                     b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("DeuñoPerroId")
-                        .HasColumnType("int");
 
                     b.Property<string>("EstadoSalud")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MedicoId")
+                    b.Property<DateTime>("FechaNacimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("HistoriaId")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ReporteId")
+                    b.Property<int?>("PropietarioMascotaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Raza")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("VeterinarioDomiciliarioId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DeuñoPerroId");
+                    b.HasIndex("HistoriaId");
 
-                    b.HasIndex("MedicoId");
+                    b.HasIndex("PropietarioMascotaId");
 
-                    b.HasIndex("ReporteId");
+                    b.HasIndex("VeterinarioDomiciliarioId");
 
                     b.ToTable("Mascotas");
                 });
 
-            modelBuilder.Entity("HomePetCare.App.Dominio.PropietarioMascota", b =>
+            modelBuilder.Entity("HomePetCare.App.Dominio.Persona", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Apellido")
+                    b.Property<string>("Apellidos")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Documento")
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nombre")
+                    b.Property<string>("Nombres")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Telefono")
@@ -100,25 +125,9 @@ namespace HomePetCare.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PropietariosMascotas");
-                });
+                    b.ToTable("Personas");
 
-            modelBuilder.Entity("HomePetCare.App.Dominio.Recomendaciones", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Descripcion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Diagnostico")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Recomendacion");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Persona");
                 });
 
             modelBuilder.Entity("HomePetCare.App.Dominio.ReporteVisita", b =>
@@ -131,11 +140,8 @@ namespace HomePetCare.App.Persistencia.Migrations
                     b.Property<string>("EstadoDeAnimo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FechaVisita")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("FormulasId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("FechaVisita")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("FrecuenciaCardiaca")
                         .HasColumnType("int");
@@ -143,93 +149,79 @@ namespace HomePetCare.App.Persistencia.Migrations
                     b.Property<int>("FrecuenciaRespiratoria")
                         .HasColumnType("int");
 
-                    b.Property<int?>("MedicoId")
+                    b.Property<int?>("HistoriaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Peso")
+                    b.Property<int>("IdVeterinario")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RecomendacionId")
-                        .HasColumnType("int");
+                    b.Property<float>("Peso")
+                        .HasColumnType("real");
 
-                    b.Property<int>("Temperatura")
-                        .HasColumnType("int");
+                    b.Property<float>("Temperatura")
+                        .HasColumnType("real");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FormulasId");
-
-                    b.HasIndex("MedicoId");
-
-                    b.HasIndex("RecomendacionId");
+                    b.HasIndex("HistoriaId");
 
                     b.ToTable("ReportesVisitas");
                 });
 
+            modelBuilder.Entity("HomePetCare.App.Dominio.PropietarioMascota", b =>
+                {
+                    b.HasBaseType("HomePetCare.App.Dominio.Persona");
+
+                    b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("PropietarioMascota");
+                });
+
             modelBuilder.Entity("HomePetCare.App.Dominio.VeterinarioDomiciliario", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.HasBaseType("HomePetCare.App.Dominio.Persona");
 
-                    b.Property<string>("Apellido")
+                    b.Property<string>("TarjetaProfeional")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TarjetaProfesional")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Telefono")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("VeterinariosDomiciliarios");
+                    b.HasDiscriminator().HasValue("VeterinarioDomiciliario");
                 });
 
             modelBuilder.Entity("HomePetCare.App.Dominio.Mascota", b =>
                 {
-                    b.HasOne("HomePetCare.App.Dominio.PropietarioMascota", "DeuñoPerro")
+                    b.HasOne("HomePetCare.App.Dominio.Historia", "Historia")
                         .WithMany()
-                        .HasForeignKey("DeuñoPerroId");
+                        .HasForeignKey("HistoriaId");
 
-                    b.HasOne("HomePetCare.App.Dominio.VeterinarioDomiciliario", "Medico")
+                    b.HasOne("HomePetCare.App.Dominio.PropietarioMascota", "PropietarioMascota")
                         .WithMany()
-                        .HasForeignKey("MedicoId");
+                        .HasForeignKey("PropietarioMascotaId");
 
-                    b.HasOne("HomePetCare.App.Dominio.ReporteVisita", "Reporte")
+                    b.HasOne("HomePetCare.App.Dominio.VeterinarioDomiciliario", "VeterinarioDomiciliario")
                         .WithMany()
-                        .HasForeignKey("ReporteId");
+                        .HasForeignKey("VeterinarioDomiciliarioId");
 
-                    b.Navigation("DeuñoPerro");
+                    b.Navigation("Historia");
 
-                    b.Navigation("Medico");
+                    b.Navigation("PropietarioMascota");
 
-                    b.Navigation("Reporte");
+                    b.Navigation("VeterinarioDomiciliario");
                 });
 
             modelBuilder.Entity("HomePetCare.App.Dominio.ReporteVisita", b =>
                 {
-                    b.HasOne("HomePetCare.App.Dominio.Formula", "Formulas")
-                        .WithMany()
-                        .HasForeignKey("FormulasId");
+                    b.HasOne("HomePetCare.App.Dominio.Historia", null)
+                        .WithMany("ReporteVisita")
+                        .HasForeignKey("HistoriaId");
+                });
 
-                    b.HasOne("HomePetCare.App.Dominio.VeterinarioDomiciliario", "Medico")
-                        .WithMany()
-                        .HasForeignKey("MedicoId");
-
-                    b.HasOne("HomePetCare.App.Dominio.Recomendaciones", "Recomendacion")
-                        .WithMany()
-                        .HasForeignKey("RecomendacionId");
-
-                    b.Navigation("Formulas");
-
-                    b.Navigation("Medico");
-
-                    b.Navigation("Recomendacion");
+            modelBuilder.Entity("HomePetCare.App.Dominio.Historia", b =>
+                {
+                    b.Navigation("ReporteVisita");
                 });
 #pragma warning restore 612, 618
         }

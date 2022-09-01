@@ -1,13 +1,12 @@
 using System;
 namespace HomePetCare.App.Dominio
+//Modela al Propietario de la Mascota (Perro)
 {
-    public class PropietarioMascota
+    public class PropietarioMascota : Persona
     {
-        public int Id { get; set; }
-        public string? Nombre { get; set; }
-        public string? Apellido { get; set; }
-        public string? Documento { get; set; }
-        public string? Direccion { get; set; }
-        public string? Telefono { get; set; }
+        //Ciudad de residencia del dueño de la mascota (Perro)
+        public string Ciudad {get; set;}
+        // Correo electronico del dueño de la mascota (perro)
+        public string Correo {get; set;}
     }
 }

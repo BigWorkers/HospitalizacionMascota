@@ -1,22 +1,17 @@
 using System;
 namespace HomePetCare.App.Dominio
+// reporte visita domiciliaria mascota (Perro)
 {
     public class ReporteVisita
     {
-        public int Id { get; set; }
-        public int Temperatura { get; set; }
-        public int Peso { get; set; }
-        public int FrecuenciaRespiratoria { get; set; }
-        public int FrecuenciaCardiaca { get; set; }
-        public string? EstadoDeAnimo { get; set; }
-        public int FechaVisita { get; set; }
-
-        public VeterinarioDomiciliario Medico { get; set; }
-        /// Relacion entre veterinario reporte
-        public Recomendaciones Recomendacion { get; set; }
-        /// Relacion entre reporte y recomendacion
-        public Formula Formulas { get; set; }
-        /// Relacion entre reporte y formula
-
+        // Datos unicos de salud de la mascota (Perro)
+        public int Id {get; set;}
+        public float Temperatura {get; set;}
+        public float Peso {get; set;}
+        public int FrecuenciaRespiratoria {get; set;}
+        public int FrecuenciaCardiaca {get; set;}
+        public string EstadoDeAnimo {get; set;}
+        public DateTime FechaVisita {get; set;}
+        public int IdVeterinario {get; set;}
     }
 }

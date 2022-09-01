@@ -1,20 +1,19 @@
 using System;
+// Modela a una Mascota (Perro)
+
 namespace HomePetCare.App.Dominio
 {
     public class Mascota
     {
-        public int Id { get; set; }
-        public string? Nombre { get; set; }
-        public int AnoNacimiento { get; set; }
-        public string? Color { get; set; }
-        public string? EstadoSalud { set; get; }
-
-        public VeterinarioDomiciliario Medico { get; set; }
-        /// Relacion entre veterinario mascota
-        public PropietarioMascota DeuñoPerro { get; set; }
-        /// Relacion entre dueño mascota
-        public ReporteVisita Reporte { get; set; }
-        /// Relacion entre mascota y Reporte visita
-
+        // Identificador unico de mascota (Perro)
+        public int Id {get; set;}
+        public string Nombre {get; set;}
+        public DateTime FechaNacimiento {get; set;}
+        public string Color {get; set;}
+        public string Raza {get; set;}
+        public string EstadoSalud {get; set;}
+        public PropietarioMascota PropietarioMascota {get; set;}
+        public VeterinarioDomiciliario VeterinarioDomiciliario {get; set;}
+        public Historia Historia {get; set;}
     }
 }
