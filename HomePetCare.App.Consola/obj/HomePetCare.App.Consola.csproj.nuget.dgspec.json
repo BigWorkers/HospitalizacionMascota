@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj": {}
+    "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj": {
+    "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj",
+        "projectUniqueName": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj",
         "projectName": "HomePetCare.App.Consola",
-        "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\obj\\",
+        "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\HomePetCare.App.Consola.csproj",
+        "packagesPath": "C:\\Users\\SamuelC\\.nuget\\packages\\",
+        "outputPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\SamuelC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -24,9 +24,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj": {
-                "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj"
+              "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj": {
+                "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj"
               }
             }
           }
@@ -39,6 +40,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -53,30 +55,49 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.28, 3.1.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj": {
+    "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
+        "projectUniqueName": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
         "projectName": "HomePetCare.App.Dominio",
-        "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\obj\\",
+        "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\SamuelC\\.nuget\\packages\\",
+        "outputPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\SamuelC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -86,6 +107,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -97,13 +119,15 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -112,21 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj": {
+    "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj",
         "projectName": "HomePetCare.App.Persistencia",
-        "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\obj\\",
+        "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\SamuelC\\.nuget\\packages\\",
+        "outputPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\SamuelC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -136,9 +160,10 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj": {
-                "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj"
+              "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj": {
+                "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj"
               }
             }
           }
@@ -151,6 +176,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -179,7 +205,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -188,7 +215,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

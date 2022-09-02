@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3AYdCYqZt9JfuA/imyRTEq3oVoKLJ6OqjENHWRJJ9IYQfzU7B9e2Bv9DeaeudpzkMeCrTMXBVpjTIpgYUssxQ==",
+  "dgSpecHash": "5lzDSe9lNcPJpk3HJdjkHXZqqnyaU/PET1tD26GlhqSTYnZCe5ZztUxIqcCIFS/MzTB6mdER0g9uR+gz1GvbEg==",
   "success": true,
-  "projectFilePath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
+  "projectFilePath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

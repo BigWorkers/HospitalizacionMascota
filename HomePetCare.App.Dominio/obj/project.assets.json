@@ -8,19 +8,19 @@
     ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\maria\\.nuget\\packages\\": {}
+    "C:\\Users\\SamuelC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
+      "projectUniqueName": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
       "projectName": "HomePetCare.App.Dominio",
-      "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\obj\\",
+      "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj",
+      "packagesPath": "C:\\Users\\SamuelC\\.nuget\\packages\\",
+      "outputPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\SamuelC\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -30,6 +30,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {}
         }
       },
@@ -41,13 +42,15 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "imports": [
           "net461",
           "net462",
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -56,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
