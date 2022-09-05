@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\HomePetCare.App.Frontend.csproj",
+      "projectUniqueName": "C:\\Users\\SamuelC\\Documents\\GitHub\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\HomePetCare.App.Frontend.csproj",
       "projectName": "HomePetCare.App.Frontend",
-      "projectPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\HomePetCare.App.Frontend.csproj",
+      "projectPath": "C:\\Users\\SamuelC\\Documents\\GitHub\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\HomePetCare.App.Frontend.csproj",
       "packagesPath": "C:\\Users\\SamuelC\\.nuget\\packages\\",
-      "outputPath": "C:\\HospitalizacionMascota\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\obj\\",
+      "outputPath": "C:\\Users\\SamuelC\\Documents\\GitHub\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SamuelC\\AppData\\Roaming\\NuGet\\NuGet.Config"
