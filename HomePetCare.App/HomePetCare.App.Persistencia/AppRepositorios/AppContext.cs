@@ -18,7 +18,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         if (!optionsBuilder.IsConfigured)
         {
              optionsBuilder
-            .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HomePetCare1.Data");
+            .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = HomePetCare.Data");
         }
     }
     }
