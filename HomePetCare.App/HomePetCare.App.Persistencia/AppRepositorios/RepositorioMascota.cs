@@ -38,9 +38,9 @@ namespace HomePetCare.App.Persistencia
         {
             return _appContext.Mascotas.FirstOrDefault(p => p.Id==IdMascota);
         }
-        Mascota IRepositorioMascota.UpdateMascota(Mascota mascota, int IdMascota_original)
+        Mascota IRepositorioMascota.UpdateMascota(Mascota mascota)
         {
-            var mascotaEncontrado=_appContext.Mascotas.FirstOrDefault(p => p.Id==IdMascota_original);
+            var mascotaEncontrado=_appContext.Mascotas.FirstOrDefault(p => p.Id==mascota.Id);
             if (mascotaEncontrado != null)
             {
                 mascotaEncontrado.Nombre=mascota.Nombre;
@@ -49,9 +49,7 @@ namespace HomePetCare.App.Persistencia
                 mascotaEncontrado.Raza=mascota.Raza;
                 mascotaEncontrado.EstadoSalud=mascota.EstadoSalud;
                 mascotaEncontrado.PropietarioMascota=mascota.PropietarioMascota;
-                mascotaEncontrado.VeterinarioDomiciliario=mascota.VeterinarioDomiciliario;
-                mascotaEncontrado.Historia=mascota.Historia;
-
+                mascotaEncontrado.Veterinario=mascota.Veterinario;
 
                 _appContext.SaveChanges();
             }

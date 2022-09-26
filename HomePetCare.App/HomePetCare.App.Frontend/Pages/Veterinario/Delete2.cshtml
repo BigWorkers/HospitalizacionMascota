@@ -1,0 +1,41 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Delete2Model
+@{
+}
+<h2>Borrar datos Veterinario</h2>
+<form method="post">
+     <input type="hidden" asp-for="Veterinario.Id"/>
+     <div class="form-group">
+        <label asp-for="Veterinario.IdPersona"></label>
+        <input asp-for="Veterinario.IdPersona" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.IdPersona"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Veterinario.Nombres"></label>
+        <input asp-for="Veterinario.Nombres" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.Nombres"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Veterinario.Apellidos"></label>
+        <input asp-for="Veterinario.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.Apellidos"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Veterinario.Direccion"></label>
+        <input asp-for="Veterinario.Direccion" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.Direccion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Veterinario.Telefono"></label>
+        <input asp-for="Veterinario.Telefono" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.Telefono"></span>
+    </div>
+     <div class="form-group">
+        <label asp-for="Veterinario.TarjetaProfesional"></label>
+        <input asp-for="Veterinario.TarjetaProfesional" class="form-control">
+        <span class="text-danger" asp-validation-for="Veterinario.TarjetaProfesional"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Borrar</button>
+   
+</form>
+    <a asp-page="./List2" class="btn-default">Volver a Veterinario </a>

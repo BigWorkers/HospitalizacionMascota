@@ -31,5 +31,6 @@ namespace HomePetCare.App.Consola
             var mascota = _repoMascota.GetMascota(IdMascota);
             Console.WriteLine(mascota.Nombre+" "+mascota.Color);
         }
+        
     }
 }

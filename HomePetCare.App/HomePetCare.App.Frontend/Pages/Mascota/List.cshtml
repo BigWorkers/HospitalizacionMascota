@@ -1,0 +1,37 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.ListModel
+@{
+}
+<h1>Lista Mascotas</h1>
+<table class="table">
+    @foreach (var mascota in Model.Mascotas)
+    {
+        <tr>
+            <td>@mascota.Nombre</td>
+            <td>@mascota.FechaNacimiento</td>
+            <td>@mascota.Color</td>
+            <td>@mascota.Raza</td>
+            <td>@mascota.EstadoSalud</td>
+                 <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-mascotaId="@mascota.Id">
+                        <i class="fas fa-info-circle fa-lg"></i>
+                        InfoPet
+                        </a>
+                 </td>     
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-mascotaId="@mascota.Id">
+                 <i class="fas fa-address-book fa-lg" aria-hidden="true"> </i>
+                        Editar
+                 </a>
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Delete" asp-route-mascotaId="@mascota.Id">
+                 <i class="fas fa-trash" aria-hidden="true"></i>
+                        Borrar
+                 </a>
+
+            </td>  
+        </tr>   
+    }
+
+    </table>
+    <a asp-page=".\Edit" class="btn btn-primary">Adicionar Mascota</a>

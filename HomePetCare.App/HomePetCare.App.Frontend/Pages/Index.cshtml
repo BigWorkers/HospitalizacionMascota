@@ -1,0 +1,109 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h5 class="display-3">Atencion Domiciliaria</h5>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@if (User.Identity.IsAuthenticated)
+{
+    <table class="table table-sm">
+        @foreach (var claim in User.Claims)
+        {
+            <tr>
+                <td>@claim.Type</td>
+                <td>@claim.Value</td>
+            </tr>
+        }
+    </table>
+}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <img class="img-logo" src="media/logo-png.png">
+            <input type="checkbox" id="menu-bar">
+            <label class="fontawesome-align-justify" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="">Inicio Sesion</a>
+                <a href="">Registrese</a>
+                <a href="">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="banner">
+            <img src="media/slide-index.png">
+            <div class="contenedor">
+                <h2>Servicio veterinario domiciliario</h2>
+                <p>¿Necesitas agendar una cita?</p>
+                <a href="#">Agendar cita</a>
+            </div>
+        </section>
+
+        <section id="bienvenidos">
+            <div class="contenedor">
+                <h2>Para muchos de nosotros las mascotas no son simples compañeros, son un miembro mas de la familia.</h2>
+                <p></p>
+            </div>
+        </section>
+        <section id="info">
+            <h3>SERVICIOS</h3>
+            <div class="contenedor">
+                <a href="/Veterinario/List2">
+                    <div class="info-pet">
+                        <img src="media/servis1.png" alt="">
+                        <h4>Veterinario a Domicilio</h4>
+                    </div>
+                </a>
+                <a href="/Mascota/List">
+                    <div class="info-pet">
+                    <img src="media/servis2.png" alt="">
+                    <h4>Mascotas</h4>
+                </div>
+                </a>
+                <a href="/VisitaDomiciliaria/List3">
+                <div class="info-pet">
+                    <img src="media/servis3.png" alt="">
+                    <h4>Visita Domicilio</h4>
+                </div>
+                </a>
+                <a href="/PropietarioMascota/List1">
+                <div class="info-pet">
+                    <img src="media/servis4.png" alt="">
+                    <h4>Propietario Mascota</h4>
+                </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p class="copy">Home care pet &copy; 2022</p>
+            <div class="sociales">
+                <a class="fontawesome-facebook-sign" href="#"></a>
+                <a class="fontawesome-twitter" href="#"></a>
+                <a class="fontawesome-camera-retro" href="#"></a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

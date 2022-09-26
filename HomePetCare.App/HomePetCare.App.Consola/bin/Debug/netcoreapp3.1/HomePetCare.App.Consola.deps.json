@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "HomePetCare.App.Consola/1.0.0": {
         "dependencies": {
+          "HomePetCare.App.Dominio": "1.0.0",
           "HomePetCare.App.Persistencia": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.9"
         },

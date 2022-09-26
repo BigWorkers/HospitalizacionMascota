@@ -1,0 +1,21 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.DetailsModel
+@{
+}
+<h2>Datos Mascota</h2>
+<div>
+    Id: @Model.Mascota.Id
+    </div>
+<div>
+    FechaNacimiento: @Model.Mascota.FechaNacimiento
+    </div>
+<div>
+    Color: @Model.Mascota.Color
+    </div>
+    <div>
+    Raza: @Model.Mascota.Raza
+    </div>
+    <div>
+    EstadoSalud: @Model.Mascota.EstadoSalud
+    </div>
+    <a asp-page="./List" class="btn-default">Volver lista Mascotas </a>

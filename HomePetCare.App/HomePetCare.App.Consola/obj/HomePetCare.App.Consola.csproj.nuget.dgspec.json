@@ -25,6 +25,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj": {
+                "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Dominio\\HomePetCare.App.Dominio.csproj"
+              },
               "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj": {
                 "projectPath": "C:\\HospitalizacionMascota\\HomePetCare.App\\HomePetCare.App.Persistencia\\HomePetCare.App.Persistencia.csproj"
               }

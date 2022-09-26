@@ -1,0 +1,36 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.List2Model
+@{
+}
+<h1>Lista Veterinarios</h1>
+<table class="table">
+    @foreach (var veterinarios in Model.veterinarios)
+    {
+        <tr>
+            <td>@veterinarios.Nombres</td>
+            <td>@veterinarios.Apellidos</td>
+            <td>@veterinarios.TarjetaProfesional</td>
+            
+                 <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details2" asp-route-veterinariosId="@veterinarios.Id">
+                        <i class="fas fa-info-circle fa-lg"></i>
+                        InfoVet
+                        </a>
+                 </td>     
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Edit2" asp-route-veterinariosId="@veterinarios.Id">
+                 <i class="fas fa-address-book fa-lg" aria-hidden="true"> </i>
+                        Editar
+                 </a>
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Delete2" asp-route-veterinariosId="@veterinarios.Id">
+                 <i class="fas fa-trash" aria-hidden="true"></i>
+                        Borrar
+                 </a>
+
+            </td>  
+        </tr>   
+    }
+
+    </table>
+    <a asp-page=".\Edit2" class="btn btn-primary">Adicionar Veterinario</a>

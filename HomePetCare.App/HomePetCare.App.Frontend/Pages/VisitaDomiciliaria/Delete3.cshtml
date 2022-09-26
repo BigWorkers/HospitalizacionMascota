@@ -1,0 +1,41 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Delete3Model
+@{
+}
+<h2>Borrar Visita</h2>
+<form method="post">
+     <input type="hidden" asp-for="VisitaDomiciliaria.Id"/>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.Temperatura"></label>
+        <input asp-for="VisitaDomiciliaria.Temperatura" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.Temperatura"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.Peso"></label>
+        <input asp-for="VisitaDomiciliaria.Peso" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.Peso"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.FrecuenciaRespiratoria"></label>
+        <input asp-for="VisitaDomiciliaria.FrecuenciaRespiratoria" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.FrecuenciaRespiratoria"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.FrecuenciaCardiaca"></label>
+        <input asp-for="VisitaDomiciliaria.FrecuenciaCardiaca" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.FrecuenciaCardiaca"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.EstadoDeAnimo"></label>
+        <input asp-for="VisitaDomiciliaria.EstadoDeAnimo" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.EstadoDeAnimo"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VisitaDomiciliaria.FechaVisita"></label>
+        <input asp-for="VisitaDomiciliaria.FechaVisita" class="form-control">
+        <span class="text-danger" asp-validation-for="VisitaDomiciliaria.FechaVisita"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Borrar</button>
+</form>
+    <a asp-page="./List3" class="btn-default">Volver a Visitas </a>

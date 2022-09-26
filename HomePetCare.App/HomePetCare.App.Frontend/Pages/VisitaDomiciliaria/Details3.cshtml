@@ -1,0 +1,28 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.Details3Model
+@{
+}
+<h2>Datos Visita</h2>
+<div>
+    Id: @Model.VisitaDomiciliaria.Id
+    </div>
+<div>
+    Temperatura: @Model.VisitaDomiciliaria.Temperatura
+    </div>
+<div>
+    Peso: @Model.VisitaDomiciliaria.Peso
+    </div>
+    <div>
+    Frecuencia Respiratoria: @Model.VisitaDomiciliaria.FrecuenciaRespiratoria
+    </div>
+    <div>
+    Frecuencia Cardiaca: @Model.VisitaDomiciliaria.FrecuenciaCardiaca
+    </div>
+    <div>
+    Estado de Animo: @Model.VisitaDomiciliaria.EstadoDeAnimo
+    </div>
+    <div>
+    Fecha Visita: @Model.VisitaDomiciliaria.FechaVisita
+    </div>
+    
+    <a asp-page="./List3" class="btn-default">Volver lista Visitas </a>

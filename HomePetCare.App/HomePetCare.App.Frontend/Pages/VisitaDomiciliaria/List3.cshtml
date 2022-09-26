@@ -1,0 +1,39 @@
+﻿@page
+@model HomePetCare.App.Frontend.Pages.List3Model
+@{
+}
+<h1>Lista Reporte Visita</h1>
+<table class="table">
+    @foreach(var visitaDomiciliaria in Model.VisitasDomiciliaria)
+    {
+        <tr>
+            <td>@visitaDomiciliaria.Temperatura</td>
+            <td>@visitaDomiciliaria.Peso</td>
+            <td>@visitaDomiciliaria.FrecuenciaRespiratoria</td>
+            <td>@visitaDomiciliaria.FrecuenciaCardiaca</td>
+            <td>@visitaDomiciliaria.EstadoDeAnimo</td>
+            <td>@visitaDomiciliaria.FechaVisita</td>
+            
+                 <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details3" asp-route-visitaDomiciliariaId="@visitaDomiciliaria.Id">
+                        <i class="fas fa-info-circle fa-lg"></i>
+                        InfoOwner
+                        </a>
+                 </td>     
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Edit3" asp-route-visitaDomiciliariaId="@visitaDomiciliaria.Id">
+                 <i class="fas fa-address-book fa-lg" aria-hidden="true"> </i>
+                        Editar
+                 </a>
+                 <td> 
+                 <a class="btn btn-primary table-btn" asp-page="./Delete3" asp-route-visitaDomiciliariaId="@visitaDomiciliaria.Id">
+                 <i class="fas fa-trash" aria-hidden="true"></i>
+                        Borrar
+                 </a>
+
+            </td>  
+        </tr>   
+    }
+
+    </table>
+    <a asp-page=".\Edit3" class="btn btn-primary">Adicionar Visita</a>

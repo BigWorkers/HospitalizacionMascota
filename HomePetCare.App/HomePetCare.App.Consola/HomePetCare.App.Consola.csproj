@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\HomePetCare.App.Persistencia\HomePetCare.App.Persistencia.csproj" />
+    <ProjectReference Include="..\HomePetCare.App.Dominio\HomePetCare.App.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

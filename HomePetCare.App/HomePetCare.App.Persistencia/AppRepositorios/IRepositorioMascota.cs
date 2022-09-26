@@ -9,7 +9,7 @@ namespace HomePetCare.App.Persistencia
     {
         IEnumerable<Mascota> GetAllMascotas();
         Mascota AddMascota(Mascota mascota);
-        Mascota UpdateMascota(Mascota mascota, int IdMascota_original);
+        Mascota UpdateMascota(Mascota mascota);
         void DeleteMascota(int IdMascota);
         Mascota GetMascota(int IdMascota);
     }

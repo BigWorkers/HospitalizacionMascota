@@ -13,7 +13,6 @@ namespace HomePetCare.App.Dominio
         public string Raza {get; set;}
         public string EstadoSalud {get; set;}
         public PropietarioMascota PropietarioMascota {get; set;}
-        public VeterinarioDomiciliario VeterinarioDomiciliario {get; set;}
-        public Historia Historia {get; set;}
+        public Veterinario Veterinario{get; set;}
     }
 }

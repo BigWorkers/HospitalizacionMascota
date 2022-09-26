@@ -8,10 +8,8 @@ namespace HomePetCare.App.Persistencia
         public DbSet <Persona> Personas {get;set;}
         public DbSet <Mascota> Mascotas {get;set;}
         public DbSet <PropietarioMascota> PropietarioMascotas {get;set;}
-        public DbSet <ReporteVisita> ReportesVisitas {get;set;}
-        public DbSet <VeterinarioDomiciliario> VeterinariosDomiciliarios {get;set;}
-        public DbSet <Historia> Historias {get;set;}
-        public DbSet <Formula> Formulas {get;set;}
+        public DbSet <Veterinario> Veterinarios {get;set;}
+        public DbSet <VisitaDomiciliaria> VisitasDomiciliaria {get;set;}
         
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
